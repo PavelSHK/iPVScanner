@@ -1,0 +1,23 @@
+﻿<Page
+    x:Class="iPVScannerWin.Views.AboutPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:iPVScannerWin.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:iPVScannerWin.Controls"
+    mc:Ignorable="d">
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <controls:PageHeader>
+            <controls:PageHeader.HeaderContent>
+                <TextBlock x:Uid="AboutHeader"/>
+            </controls:PageHeader.HeaderContent>
+        </controls:PageHeader>
+    </Grid>
+</Page>
+

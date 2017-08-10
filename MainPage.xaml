@@ -1,0 +1,82 @@
+﻿<Page
+    x:Class="iPVScannerWin.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:iPVScannerWin"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:iPVScannerWin.Controls"
+    mc:Ignorable="d"
+    TabNavigation="Cycle">
+    <Page.Resources>
+        <DataTemplate x:Key="NavMenuItemTemplate" x:DataType="local:NavMenuItem">
+            <Grid Height="50">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="36" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                
+                <FontIcon x:Name="Glyph" 
+                          FontSize="16" 
+                          Glyph="{x:Bind SymbolAsChar}" 
+                          VerticalAlignment="Center" 
+                          HorizontalAlignment="Center" 
+                          ToolTipService.ToolTip="{x:Bind Label}"/>
+                <TextBlock x:Name="Text" 
+                           Grid.Column="1" 
+                           Text="{x:Bind Label}" 
+                           Style="{StaticResource BodyTextBlockStyle}" 
+                           TextWrapping="NoWrap" 
+                           TextTrimming="CharacterEllipsis"
+                           VerticalAlignment="Center"/>
+            </Grid>
+        </DataTemplate>
+    </Page.Resources>
+    <Grid x:Name="LayoutRoot" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        
+        <ToggleButton x:Name="TogglePaneButton"
+                      TabIndex="1"
+                      Canvas.ZIndex="100"
+                      IsChecked="{Binding IsPaneOpen, ElementName=RootSplitView, Mode=TwoWay}"
+                      Unchecked="TogglePaneButton_Unchecked"
+                      Checked="TogglePaneButton_Checked"
+                      AutomationProperties.Name="Navigation"
+                      ToolTipService.ToolTip="Navigation"
+                      Style="{StaticResource TogglePaneButtonStyle}"  
+                      Foreground="White"
+                      /> 
+
+        <SplitView x:Name="RootSplitView"
+                   DisplayMode="Overlay"
+                   OpenPaneLength="270"
+                   PaneBackground="#FFE2E2E2"
+                   IsTabStop="False"                   
+                   PaneClosed="RootSplitView_PaneClosed">
+            <SplitView.Pane>
+                <Grid x:Name="PaneContentGrid">
+                    <controls:NavMenuListView x:Name="NavMenuList"
+                                              TabIndex="3"
+                                              Margin="0,60,0,0"
+                                              ContainerContentChanging="NavMenuItemContainerContentChanging"
+                                              ItemInvoked="NavMenuList_ItemInvoked"
+                                              ItemTemplate="{StaticResource NavMenuItemTemplate}"/>
+                </Grid>
+            </SplitView.Pane>
+            <SplitView.Content>
+                <Frame x:Name="frame"
+                       Navigating="OnNavigatingToPage"
+                       Navigated="OnNavigatedToPage">
+                    <Frame.ContentTransitions>
+                        <TransitionCollection>
+                            <NavigationThemeTransition>
+                                <NavigationThemeTransition.DefaultNavigationTransitionInfo>
+                                    <EntranceNavigationTransitionInfo/>
+                                </NavigationThemeTransition.DefaultNavigationTransitionInfo>
+                            </NavigationThemeTransition>
+                        </TransitionCollection>
+                    </Frame.ContentTransitions>
+                </Frame>
+            </SplitView.Content>
+        </SplitView>
+    </Grid>
+</Page>
