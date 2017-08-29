@@ -1,0 +1,1 @@
+MainPackage=C:\Users\astri\Documents\Visual Studio 2017\Projects\iPVScanner\bin\x64\Debug\iPVScannerWin_1.0.6.0_x64_Debug.appx

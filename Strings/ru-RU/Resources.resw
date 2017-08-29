@@ -125,6 +125,18 @@
     <value>О программе</value>
     <comment>Шапка</comment>
   </data>
+  <data name="InternetErrorContent" xml:space="preserve">
+    <value>Проверьте подключение и повторите попытку</value>
+    <comment>Текст ошибки об отсутствии интернета</comment>
+  </data>
+  <data name="InternetErrorTitle" xml:space="preserve">
+    <value>Нет соединения с интернетом</value>
+    <comment>Заголовок ошибки об отсутствии интернета</comment>
+  </data>
+  <data name="Language.Header" xml:space="preserve">
+    <value>Язык</value>
+    <comment>Язык</comment>
+  </data>
   <data name="Manual" xml:space="preserve">
     <value>Руководство пользователя</value>
     <comment>Элемент меню</comment>
@@ -133,6 +145,10 @@
     <value>Руководство пользователя</value>
     <comment>Шапка</comment>
   </data>
+  <data name="ManualTxt.Text" xml:space="preserve">
+    <value>Здесь может быть ваш текстЗдесь может быть ваш текстЗдесь может быть ваш текстЗдесь может быть ваш текстЗдесь может быть ваш текстЗдесь может быть ваш текстЗдесь может быть ваш текстЗдесь может быть ваш текстЗдесь может быть ваш текстЗдесь может быть ваш текстЗдесь может быть ваш текстЗдесь может быть ваш текстЗдесь может быть ваш текстЗдесь может быть ваш текстЗдесь может быть ваш текстЗдесь может быть ваш текстЗдесь может быть ваш текстЗдесь может быть ваш текстЗдесь может быть ваш текстЗдесь может быть ваш текстЗдесь может быть ваш текстЗдесь может быть ваш текстЗдесь может быть ваш текстЗдесь может быть ваш текстЗдесь может быть ваш текстЗдесь может быть ваш текстЗдесь может быть ваш текстЗдесь может быть ваш текстЗдесь может быть ваш текстЗдесь может быть ваш текстЗдесь может быть ваш текстЗдесь может быть ваш текстЗдесь может быть ваш текстЗдесь может быть ваш текстЗдесь может быть ваш текстЗдесь может быть ваш текстЗдесь может быть ваш текстЗдесь может быть ваш текстЗдесь может быть ваш текстЗдесь может быть ваш текстЗдесь может быть ваш текстЗдесь может быть ваш текстЗдесь может быть ваш текстЗдесь может быть ваш текстЗдесь может быть ваш текстЗдесь может быть ваш текстЗдесь может быть ваш текстЗдесь может быть ваш текстЗдесь может быть ваш текстЗдесь может быть ваш текстЗдесь может быть ваш текстЗдесь может быть ваш текст</value>
+    <comment>Текст руководства пользователя</comment>
+  </data>
   <data name="MyVideos" xml:space="preserve">
     <value>Мои ролики</value>
     <comment>Элемент меню</comment>
@@ -140,6 +156,14 @@
   <data name="MyVideosHeader.Text" xml:space="preserve">
     <value>Мои ролики</value>
     <comment>Шапка</comment>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Нет</value>
+    <comment>Нет</comment>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>Ок</value>
+    <comment>Ок ( для кнопок)</comment>
   </data>
   <data name="Scanning" xml:space="preserve">
     <value>Сканирование</value>
@@ -164,5 +188,13 @@
   <data name="TermsHeader.Text" xml:space="preserve">
     <value>Условия предоставления сервиса</value>
     <comment>Шапка</comment>
+  </data>
+  <data name="TryAgain" xml:space="preserve">
+    <value>Попробовать снова</value>
+    <comment>Попробовать снова</comment>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Да</value>
+    <comment>Да</comment>
   </data>
 </root>

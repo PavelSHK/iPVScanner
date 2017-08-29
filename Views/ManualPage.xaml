@@ -18,5 +18,12 @@
                 <TextBlock x:Uid="ManualHeader"/>
             </controls:PageHeader.HeaderContent>
         </controls:PageHeader>
+        <ScrollViewer Grid.Row="1" HorizontalScrollMode="Disabled" VerticalScrollMode="Auto">
+            <TextBlock 
+                    x:Uid="ManualTxt"
+                    Margin="10"
+                    TextWrapping="Wrap"
+                    FontSize="16" />
+        </ScrollViewer>
     </Grid>
 </Page>

@@ -10,11 +10,12 @@
     d:DesignWidth="400">
 
     <Grid>
-        <Grid x:Name="titleBar" Height="55">
+        <Grid x:Name="titleBar" Height="60">
             <ContentPresenter x:Name="content"
                               VerticalAlignment="Center"
                               HorizontalAlignment="Center"                            
-                              Content="{x:Bind HeaderContent}"/>
+                              Content="{x:Bind HeaderContent}"
+                              Margin="5,0,0,0"/>
         </Grid>
     </Grid>
 </UserControl>

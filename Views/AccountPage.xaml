@@ -19,13 +19,13 @@
                 </controls:PageHeader.HeaderContent>
             </controls:PageHeader>
      
-        <ProgressRing x:Name="Ring"
-                      Grid.Row="1"
-                      Height="50"
-                      Width="50"
+        <ProgressBar x:Name="Ring"
+                      Grid.Row="1"                     
+                      VerticalAlignment="Bottom"
                       Canvas.ZIndex="100"
                       Background="Transparent"
-                      Foreground="Black"/>
+                      Foreground="Black"
+                     Height="10"/>
         <WebView x:Name="WebBrowser" Grid.Row="1"/>
     </Grid>
 </Page>

@@ -18,17 +18,18 @@ using iPVScannerWin.Views;
 using Windows.UI;
 using Windows.UI.ViewManagement;
 using Windows.Foundation.Metadata;
+using Windows.Globalization;
 
 namespace iPVScannerWin
 {    
     sealed partial class App : Application
     {
         public static Windows.ApplicationModel.Resources.ResourceLoader loader = new Windows.ApplicationModel.Resources.ResourceLoader();
+        public static Windows.Storage.ApplicationDataContainer localSettings = Windows.Storage.ApplicationData.Current.LocalSettings;
 
         public App()
         {
             this.InitializeComponent();
-            this.Suspending += OnSuspending;
         }     
         protected async override void OnLaunched(LaunchActivatedEventArgs e)
         {
@@ -50,6 +51,7 @@ namespace iPVScannerWin
                     titleBar.ButtonBackgroundColor = titleBarColor;
                 }
             }
+            
                 
             MainPage mainPage = Window.Current.Content as MainPage;
 
@@ -57,7 +59,7 @@ namespace iPVScannerWin
             {
                 mainPage = new MainPage();
 
-                mainPage.Language = Windows.Globalization.ApplicationLanguages.Languages[0];
+
 
                 mainPage.AppFrame.NavigationFailed += OnNavigationFailed;
 
@@ -80,14 +82,6 @@ namespace iPVScannerWin
         void OnNavigationFailed(object sender, NavigationFailedEventArgs e)
         {
             throw new Exception("Failed to load Page " + e.SourcePageType.FullName);
-        }
-
-       
-        private void OnSuspending(object sender, SuspendingEventArgs e)
-        {
-            var deferral = e.SuspendingOperation.GetDeferral();
-           
-            deferral.Complete();
         }
     }
 }

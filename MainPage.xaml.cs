@@ -2,7 +2,9 @@
 using iPVScannerWin.Views;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using Windows.ApplicationModel;
 using Windows.Foundation;
 using Windows.Foundation.Metadata;
 using Windows.Phone.UI.Input;
@@ -82,6 +84,8 @@ namespace iPVScannerWin
                     this.CheckTogglePaneButtonSizeChanged();
                 });
 
+           
+
             if (ApiInformation.IsTypePresent("Windows.Phone.UI.Input.HardwareButtons"))
             {
                 HardwareButtons.BackPressed += HardwareButtons_BackPressed;
@@ -93,6 +97,8 @@ namespace iPVScannerWin
             }
         }
 
+        
+
         private void SystemNavigationManager_BackRequested(object sender, BackRequestedEventArgs e)
         {
             bool handled = e.Handled;
@@ -102,16 +108,27 @@ namespace iPVScannerWin
 
         private void BackRequested (ref bool handled)
         {
-            if (this.AppFrame == null) return;
+            if (this.AppFrame.CurrentSourcePageType == typeof(ScanningPage))
+            {
+                ShowDialog();
+                handled = true;
+            }
             else if (this.AppFrame.CanGoBack && !handled && !AccountPage.browser.CanGoBack)
             {
                 handled = true;
                 this.AppFrame.GoBack();
             }
-            else if(AccountPage.browser.CanGoBack)
+            else if (AccountPage.browser.CanGoBack)
             {
                 AccountPage.browser.GoBack();
+                handled = true;
             }
+            else return;
+        }
+
+        private async void ShowDialog()
+        {
+            await new MessageDialog("Exit?").ShowAsync();
         }
 
         private void HardwareButtons_BackPressed(object sender, BackPressedEventArgs e)

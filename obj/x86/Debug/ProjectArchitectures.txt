@@ -1,0 +1,1 @@
+C:\Users\astri\Documents\Visual Studio 2017\Projects\iPVScanner\iPVScannerWin.csproj;x86

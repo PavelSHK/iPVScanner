@@ -18,5 +18,9 @@
                 <TextBlock x:Uid="SettingsHeader"/>
             </controls:PageHeader.HeaderContent>
         </controls:PageHeader>
+        <Grid Grid.Row="1">
+            <ComboBox x:Name="LanguageSelector" Margin="20" x:Uid="Language" PlaceholderText="{Binding ElementName=LanguageSelector, Path=SelectedValue}">
+            </ComboBox>
+        </Grid>
     </Grid>
 </Page>

@@ -10,7 +10,7 @@
     TabNavigation="Cycle">
     <Page.Resources>
         <DataTemplate x:Key="NavMenuItemTemplate" x:DataType="local:NavMenuItem">
-            <Grid Height="50">
+            <Grid Height="55">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="36" />
                     <ColumnDefinition />

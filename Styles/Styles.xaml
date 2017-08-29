@@ -180,7 +180,6 @@
         <Setter Property="Background" Value="{ThemeResource SystemControlBackgroundChromeMediumLowBrush}"/>
         <Setter Property="BorderBrush" Value="{ThemeResource SystemControlForegroundChromeHighBrush}"/>
         <Setter Property="BorderThickness" Value="{ThemeResource FlyoutBorderThemeThickness}"/>
-        <Setter Property="Padding" Value="0"/>
         <Setter Property="MinWidth" Value="{ThemeResource FlyoutThemeMinWidth}"/>
         <Setter Property="MaxWidth" Value="{ThemeResource FlyoutThemeMaxWidth}"/>
         <Setter Property="MinHeight" Value="{ThemeResource FlyoutThemeMinHeight}"/>
@@ -192,10 +191,10 @@
         <Setter Property="ScrollViewer.ZoomMode" Value="Disabled"/>
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="FlyoutPresenter">
+                <ControlTemplate TargetType="FlyoutPresenter" >
                     <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}">
                         <ScrollViewer x:Name="ScrollViewer" AutomationProperties.AccessibilityView="Raw" HorizontalScrollMode="{TemplateBinding ScrollViewer.HorizontalScrollMode}" HorizontalScrollBarVisibility="{TemplateBinding ScrollViewer.HorizontalScrollBarVisibility}" VerticalScrollBarVisibility="{TemplateBinding ScrollViewer.VerticalScrollBarVisibility}" VerticalScrollMode="{TemplateBinding ScrollViewer.VerticalScrollMode}" ZoomMode="{TemplateBinding ScrollViewer.ZoomMode}">
-                            <ContentPresenter ContentTemplate="{TemplateBinding ContentTemplate}" ContentTransitions="{TemplateBinding ContentTransitions}" Content="{TemplateBinding Content}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                            <ContentPresenter ContentTemplate="{TemplateBinding ContentTemplate}" ContentTransitions="{TemplateBinding ContentTransitions}" Content="{TemplateBinding Content}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"  VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
                         </ScrollViewer>
                     </Border>
                 </ControlTemplate>
